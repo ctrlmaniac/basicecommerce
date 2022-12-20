@@ -9,6 +9,7 @@ import jakarta.persistence.OneToMany;
 
 @Entity
 public class Product {
+
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     private String id;
@@ -16,7 +17,7 @@ public class Product {
     @Column
     private String name;
 
-    @Column(unique=true)
+    @Column(unique = true)
     private String slug;
 
     @Column
@@ -87,8 +88,4 @@ public class Product {
         this.category = category;
     }
 
-  
-
-    
-    
 }

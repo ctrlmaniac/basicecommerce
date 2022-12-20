@@ -8,7 +8,7 @@ import jakarta.persistence.Id;
 
 @Entity
 public class Category {
-    
+
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     private String id;
@@ -16,7 +16,7 @@ public class Category {
     @Column
     private String name;
 
-    @Column(unique=true)
+    @Column(unique = true)
     private String slug;
 
     @Column
@@ -63,5 +63,4 @@ public class Category {
         this.description = description;
     }
 
-    
 }
