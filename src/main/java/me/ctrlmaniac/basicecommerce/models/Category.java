@@ -1,4 +1,4 @@
-package me.ctrlmaniac.basicecommerce.Model;
+package me.ctrlmaniac.basicecommerce.models;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -7,28 +7,28 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
 @Entity
-public class Categoria {
+public class Category {
     
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     private String id;
 
     @Column
-    private String Name;
+    private String name;
 
     @Column(unique=true)
-    private String Slug;
+    private String slug;
 
     @Column
-    private String Description;
+    private String description;
 
-    public Categoria() {
+    public Category() {
     }
 
-    public Categoria(String name, String slug, String description) {
-        Name = name;
-        Slug = slug;
-        Description = description;
+    public Category(String name, String slug, String description) {
+        this.name = name;
+        this.slug = slug;
+        this.description = description;
     }
 
     public String getId() {
@@ -40,27 +40,27 @@ public class Categoria {
     }
 
     public String getName() {
-        return Name;
+        return name;
     }
 
     public void setName(String name) {
-        Name = name;
+        this.name = name;
     }
 
     public String getSlug() {
-        return Slug;
+        return slug;
     }
 
     public void setSlug(String slug) {
-        Slug = slug;
+        this.slug = slug;
     }
 
     public String getDescription() {
-        return Description;
+        return description;
     }
 
     public void setDescription(String description) {
-        Description = description;
+        this.description = description;
     }
 
     
