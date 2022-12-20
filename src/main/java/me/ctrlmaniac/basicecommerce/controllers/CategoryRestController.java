@@ -17,7 +17,7 @@ import me.ctrlmaniac.basicecommerce.models.Category;
 import me.ctrlmaniac.basicecommerce.services.CategoryService;
 
 @RestController
-@RequestMapping("/api/categorie")
+@RequestMapping("/api/categories")
 public class CategoryRestController {
 
     @Autowired

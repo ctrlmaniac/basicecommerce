@@ -17,7 +17,7 @@ import me.ctrlmaniac.basicecommerce.models.Product;
 import me.ctrlmaniac.basicecommerce.services.ProductService;
 
 @RestController
-@RequestMapping("/api/prodotti")
+@RequestMapping("/api/products")
 public class ProductRestController {
     @Autowired
     ProductService productService;
