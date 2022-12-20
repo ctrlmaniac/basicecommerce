@@ -12,7 +12,7 @@
 	<artifactId>basicecommerce</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>basicecommerce</name>
-	<description>Demo project for Spring Boot</description>
+	<description>A basic e-commerce pluggable and customizable written in java</description>
 	<properties>
 		<java.version>17</java.version>
 	</properties>
@@ -42,6 +42,11 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+		<dependency>
+			<groupId>me.paulschwarz</groupId>
+			<artifactId>spring-dotenv</artifactId>
+			<version>2.5.4</version>
+		  </dependency>
 	</dependencies>
 
 	<build>
