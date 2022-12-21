@@ -1,4 +1,4 @@
-package me.ctrlmaniac.basicecommerce.controllers;
+package me.ctrlmaniac.basicecommerce.controllers.rest;
 
 import java.util.List;
 
@@ -18,7 +18,7 @@ import me.ctrlmaniac.basicecommerce.services.CategoryService;
 
 @RestController
 @RequestMapping("/api/categories")
-public class CategoryRestController {
+public class CategoryController {
 
     @Autowired
     CategoryService categoryService;

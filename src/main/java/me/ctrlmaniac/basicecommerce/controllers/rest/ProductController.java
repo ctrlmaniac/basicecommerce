@@ -1,4 +1,4 @@
-package me.ctrlmaniac.basicecommerce.controllers;
+package me.ctrlmaniac.basicecommerce.controllers.rest;
 
 import java.util.List;
 
@@ -18,7 +18,7 @@ import me.ctrlmaniac.basicecommerce.services.ProductService;
 
 @RestController
 @RequestMapping("/api/products")
-public class ProductRestController {
+public class ProductController {
     @Autowired
     ProductService productService;
 
