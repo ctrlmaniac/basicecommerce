@@ -9,15 +9,19 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.ModelAndView;
 
+import me.ctrlmaniac.basicecommerce.models.Category;
 import me.ctrlmaniac.basicecommerce.models.Product;
+import me.ctrlmaniac.basicecommerce.services.CategoryService;
 import me.ctrlmaniac.basicecommerce.services.ProductService;
-
 
 @Controller
 public class ProductAdController {
 
     @Autowired
     ProductService productService;
+
+    @Autowired
+    CategoryService categoryService;
 
     @GetMapping(value = "/admin/product")
     public ModelAndView showProduct() {
@@ -31,7 +35,9 @@ public class ProductAdController {
         view.addObject("product", nuovoA);
 
         List<Product> listProd = productService.findAll();
+        List<Category> listCat = categoryService.findAll();
         view.addObject("listProduct", listProd);
+        view.addObject("categories", listCat);
         return view;
     }
 

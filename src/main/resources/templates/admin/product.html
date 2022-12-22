@@ -19,13 +19,28 @@
       <ul>
         <li th:each="p:${listProduct}" th:text="${p.getName()}"></li>
       </ul>
-      <form action="#" th:action="@{/admin/product/create}" th:object="${product}" method="post">
-        <input type="text" name="name"placeholder="insert name">
-        <input type="text" name="slug" placeholder="insert slug">
-        <input type="text" name="description" placeholder="insert description">
-        <input type="double" name="price" placeholder="insert price">
-        <input type="text" name="category" placeholder="insert category">
-        <input type="submit" value="submit" class="bg-primary text-white">
+      <form
+        action="#"
+        th:action="@{/admin/product/create}"
+        th:object="${product}"
+        method="post"
+      >
+        <input type="text" name="name" placeholder="insert name" />
+        <input type="text" name="slug" placeholder="insert slug" />
+        <input
+          type="text"
+          name="description"
+          placeholder="insert description"
+        />
+        <input type="double" name="price" placeholder="insert price" />
+        <select name="category">
+          <option
+            th:each="c : ${categories}"
+            th:value="${c.getId()}"
+            th:text="${c.getName()}"
+          ></option>
+        </select>
+        <input type="submit" value="submit" class="bg-primary text-white" />
       </form>
     </div>
     <script
